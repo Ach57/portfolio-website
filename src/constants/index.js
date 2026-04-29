@@ -125,11 +125,34 @@ const techStackIcons = [
 const expCards = [
   {
     review:
+      "Started a full-time contract with the Digital Workplace Team, focused on contributing to impactful projects while continuing to grow professionally.",
+    imgPath: "/images/exp1.png",
+    logoPath: "/images/logo1.png",
+    title:
+      "IT Coordinator, Digital Solutions • \
+       Digital & Innovations - Digital Solutions Web",
+    date: "Jan 2026 - Present",
+    responsibilities: [
+      "Designing scalable and efficient cloud system architectures for data engineering pipelines.",
+      "Identifying and implementing new processes and solutions using Microsoft Azure services, \
+including Azure AI Foundry, Logic Apps, Azure Function Apps, Blob Storage, and Azure \
+Databricks",
+      "Developing automated workflows using Power Automate and integrating them with Logic \
+Apps as needed",
+      "Creating and maintaining logic functions using Python, JavaScript, PowerShell, or C#, \
+tailored to specific problem requirements",
+      "Updating and maintaining automation and workflows for SharePoint and Microsoft Teams. \
+Collaborating via Azure DevOps to track development progress",
+      "Supporting Digital Web initiatives, contributing to both front-end and back-end.",
+    ],
+  },
+  {
+    review:
       "Starting my second internship at Saputo Inc. as part of the Digital Workplace team. Excited to continue growing and contributing on this new journey!",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
     title: "Digital WorkPlace IT Analyst Intern",
-    date: "May 2025 - Present",
+    date: "May 2025 - Dec 2025",
     responsibilities: [
       "Identify and develop new automations and processes using Logic Apps, Azure Functions, SharePoint and coding",
       "Deliver exceptional service to our global internal customers, addressing all their workplace collaboration system needs.",
@@ -141,7 +164,7 @@ const expCards = [
       "It was my first internship at Nestle Health Science in Fall 2024 and I'm glad about the new connections I made and the new things I learnt.",
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
-    title: "IT Analyst",
+    title: "IT Analyst Intern",
     date: "August 2024 - December 2024",
     responsibilities: [
       "Organized large data sets using Python libraries (e.g., Pandas, openpyxl) to create easy-to-understand visualizations.",
@@ -193,6 +216,58 @@ const socialImgs = [
   },
 ];
 
+const projects = [
+  {
+    title: "EDITH: Real-Time AI Form Feedback Through Voice-Controlled Vision",
+    description:
+      "EDITH is a browser-based, voice-activated HUD that leverages \
+      temporal convolutional neural networks to analyze human movement \
+      in real time. With a simple command, it activates your camera, \
+      runs the appropriate model, and streams annotated feedback \
+      directly to the dashboard. Designed for instant, hands-free \
+      interaction, EDITH delivers precise form analysis without \
+      interrupting the user’s workflow.",
+    imgPath: "/images/project1.png",
+    alt: "EDITH Real-Time AI Form detector",
+    containerClass: "first-project-wrapper",
+    imageWrapperClass: "image-wrapper",
+    textWrapperClass: "text-content",
+    pClass: "text-white-50 md:text-xl",
+  },
+  {
+    title: "Concordia CS Practice Vault: A Central Hub for Course Problems",
+    description:
+      "Concordia CS Practice Vault is a web platform that centralizes \
+      practice problems for computer science courses, making it easier \
+      for students to find and prepare effectively. Built with a React \
+      and Vite frontend and powered by an Express.js backend, it \
+      integrates AWS S3 for scalable storage and Supabase for data \
+      management. The system is containerized with Docker to support \
+      reliable deployment and continuous integration, ensuring a \
+      smooth and consistent user experience.",
+    imgPath: "/images/project2.png",
+    alt: "Concordia CS Practice Vault",
+    containerClass: "project",
+    imageWrapperClass: "image-wrapper bg-[#fa624b]",
+    textWrapperClass: null, // No wrapper for list projects
+    pClass: "text-white-50 md:text-m",
+  },
+  {
+    title: "Pet Adoption Website: My First Full-Stack Web App",
+    description:
+      "This was the first website I built using Node.js, HTML, CSS, and \
+      JavaScript—a project where I poured in a lot of passion and \
+      dedication to make it feel special. Through it, I learned the \
+      value of clean structure and styling, which later led me to  \
+      explore more efficient workflows with Bootstrap, Three.js, and React.",
+    imgPath: "/images/project3.png",
+    alt: "Pet Adoption Website",
+    imageWrapperClass: "image-wrapper bg-[#FFE7EB]",
+    textWrapperClass: null,
+    pClass: "text-white-50 md:text-m",
+  },
+];
+
 export {
   words,
   abilities,
@@ -203,4 +278,5 @@ export {
   techStackIcons,
   techStackImgs,
   navLinks,
+  projects,
 };
