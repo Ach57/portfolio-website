@@ -32,43 +32,46 @@ const AppShowcase = () => {
     });
   }, []);
 
-  const renderProjects = (projectList) =>
-    projectList.map((project, index) => (
-      <div
-        key={index}
-        ref={(el) => (cardRefs.current[index] = el)}
-        className={project.containerClass}
-      >
-        <div className={project.imageWrapperClass}>
-          <img src={project.imgPath} alt={project.alt} />
-        </div>
-
-        {project.textWrapperClass ? (
-          // First project: h2 + p wrapped in a text-content div
-          <div className={project.textWrapperClass}>
-            <h2>{project.title}</h2>
-            <p className={project.pClass}>{project.description}</p>
+  const renderProjects = (projectList, indexOffset = 0) =>
+    projectList.map((project, index) => {
+      const globalIndex = index + indexOffset;
+      return (
+        <div
+          key={globalIndex}
+          ref={(el) => (cardRefs.current[globalIndex] = el)}
+          className={project.containerClass}
+        >
+          <div className={project.imageWrapperClass}>
+            <img src={project.imgPath} alt={project.alt} />
           </div>
-        ) : (
-          // List projects: h2 + p directly in the card
-          <>
-            <h2>{project.title}</h2>
-            <p className={project.pClass}>{project.description}</p>
-          </>
-        )}
-      </div>
-    ));
+
+          {project.textWrapperClass ? (
+            // First project: h2 + p wrapped in a text-content div
+            <div className={project.textWrapperClass}>
+              <h2>{project.title}</h2>
+              <p className={project.pClass}>{project.description}</p>
+            </div>
+          ) : (
+            // List projects: h2 + p directly in the card
+            <>
+              <h2>{project.title}</h2>
+              <p className={project.pClass}>{project.description}</p>
+            </>
+          )}
+        </div>
+      );
+    });
 
   return (
     <div id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
         <div className="showcaselayout">
           {/* First project renders alone */}
-          {renderProjects(projects.slice(0, 1))}
+          {renderProjects(projects.slice(0, 1), 0)}
 
           {/* Remaining projects go in the list wrapper */}
           <div className="project-list-wrapper overflow-hidden">
-            {renderProjects(projects.slice(1))}
+            {renderProjects(projects.slice(1), 1)}
           </div>
         </div>
       </div>
